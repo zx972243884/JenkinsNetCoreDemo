@@ -44,5 +44,6 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
  
 VOLUME /app
+EXPOSE 7010
  
 ENTRYPOINT ["dotnet", "JenkinsNetCoreDemo.dll"]
