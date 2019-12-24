@@ -17,7 +17,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 
 WORKDIR /src
 #COPY . .
-COPY .
+COPY ./JenkinsNetCoreDemo .
 #RUN dotnet restore --configfile nuget.config JenkinsNetCoreDemo.sln --no-cache && \
     #dotnet build --no-restore -c Release JenkinsNetCoreDemo.sln
 RUN dotnet restore JenkinsNetCoreDemo.sln --no-cache && \
