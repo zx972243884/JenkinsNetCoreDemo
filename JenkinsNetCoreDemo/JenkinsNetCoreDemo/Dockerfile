@@ -16,8 +16,8 @@ RUN apt-get install libgdiplus -y && ln -s libgdiplus.so gdiplus.dll
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 
 WORKDIR /src
-COPY . . .
-
+#COPY . .
+COPY . 
 #RUN dotnet restore --configfile nuget.config JenkinsNetCoreDemo.sln --no-cache && \
     #dotnet build --no-restore -c Release JenkinsNetCoreDemo.sln
 RUN dotnet restore JenkinsNetCoreDemo.sln --no-cache && \
